@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anastasia S</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="знак.png" type="image/png">
+</head>
+<body>
+    <div class="card">
+        <img src="your-photo.jpg" alt="Фото" class="card__photo">
+        <h1 class="card__name">Анастасия Селиванова</h1>
+        <p class="card__title">QA Engineer ,  26 y.o.<br />Rostov-on-Don</p>
+        <div align=LEFT>
+                     <li>Работаю с Postman, Swagger, Devtools, Matabase, <br> Jaeger, Test it, Kibana, Sentry, Яндекс.Трекер</li>
+                     <li> Знаю HTTP/s, REST, SQL, частично HTML и CSS</li>
+                     <li>Учусь тестированию мобилок и авто тестам   </li>
+                     <li>Душа лежит больше к фронту</li>
+                     <li>Умею делать хорошо, но вовремя :)</li>
+                     
+        </div>
+        <button id ="texttt">продам душу за котиков (клик)</button>
+        <div><button id ="pcat">усато-хвостатая шутка</button>
+            <a href="https://t.me/slvnv_a" class="card__contact">телеграм</a></div>
+    </div>
+    
+    <audio id="audioPlayer" src="котик.mp3" preload="auto"></audio>
+ <script>
+        const photo = document.getElementById('texttt');
+        const audio = document.getElementById('audioPlayer');
+        photo.addEventListener('mouseenter', () => {
+            audio.play();
+        });
+    </script>
+
+
+    <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01" src="коткот.jpg" alt="Котик">
+</div>
+
+<script>
+    // Получаем элементы
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("pcat");
+    var span = document.getElementsByClassName("close")[0];
+
+    // Когда пользователь нажимает на кнопку, открыть модальное окно
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // Когда пользователь нажимает на <span> (x), закрыть модальное окно
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Когда пользователь кликает в любом месте за пределами картинки, закрыть окно
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
